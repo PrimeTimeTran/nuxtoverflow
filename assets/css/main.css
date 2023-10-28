@@ -1,3 +1,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  html {
+    @apply text-white;
+  } 
+}
+
+/* :root {
+  --bg-color: #7D98A1;
+  background-color: var(--bg-color);
+} */

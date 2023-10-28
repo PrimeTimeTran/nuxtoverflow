@@ -5,34 +5,34 @@
   >
     <ul v-if="category.children?.length > 0">
       <h1>
-        <a
+        <NuxtLink
           :href="category._path"
           class="text-blue-500"
         >
           {{ category.title }}
-        </a>
+        </NuxtLink>
       </h1>
       <div>
         <li
           class="my-3 list-none ml-6"
           v-for="child in category.children.slice(1)"
         >
-          <a
+          <NuxtLink
             :href="child._path"
             class="text-blue-500"
           >
             {{ child.title }}
-          </a>
+          </NuxtLink>
         </li>
       </div>
     </ul>
     <div v-else>
-      <a
+      <NuxtLink
         :href="category._path"
         class="text-blue-500"
       >
         {{ category.title }}
-      </a>
+      </NuxtLink>
     </div>
   </li>
   <ContentDoc class="prose" />

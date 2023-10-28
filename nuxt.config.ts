@@ -19,6 +19,7 @@ export default defineNuxtConfig({
         default: 'github-dark',
         dark: 'github-dark',
         sepia: 'monokai',
+        light: 'github-light',
       },
     },
   },

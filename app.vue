@@ -1,15 +1,18 @@
 <template>
-  <NuxtLayout>
-    <NuxtPage />
-  </NuxtLayout>
+  <html>
+    <body>
+      <NuxtLayout>
+        <NuxtPage />
+      </NuxtLayout>
+    </body>
+  </html>
 </template>
 
 <script>
-import { createHead } from 'unhead'
+import { createHead, useHead } from 'unhead'
 
 createHead()
 
-import { useHead } from 'unhead'
 useHead({
   script: [
     {

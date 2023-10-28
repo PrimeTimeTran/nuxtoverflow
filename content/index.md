@@ -12,6 +12,8 @@ Welcome to my blog. I made this to ensure I
 
 ## Checklist
 
+An overview of the things I expect to have on each blog project
+
 ### Blog
 
 - [x] Add blog posts.
@@ -25,7 +27,12 @@ Welcome to my blog. I made this to ensure I
 - [x] Add tags search behavior.
 - [x] Add admin panel for WYSIGYW editing.
 
-### DX
+### Developer Experience
 
 - [x] Add directory routing.
 - [x] Add partials to reuse logic.
+
+
+### User Experience
+
+- [x] Light & Dark mode
