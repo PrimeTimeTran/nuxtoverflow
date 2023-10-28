@@ -1,4 +1,11 @@
+---
+createdAt: 2023-10-28
+title: Top Blogging Tools
+description: Overview of blogging tools
+---
+
 ## Best Blogging Platform for Developers
+
 In 2023 there are many options for what to use as a blogging platform. As is common in other areas of software development, the best
 tool depends on what your requirements are.
 

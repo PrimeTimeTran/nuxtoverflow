@@ -1,20 +1,16 @@
 <template>
-  <NuxtLayout>
-    <br />
-    <h1 class="text-3xl">Projects</h1>
-    <li
-      v-for="item in projects"
-      class="my-3 list-none"
+  <ContentDoc class="prose" />
+  <li
+    v-for="item in projects"
+    class="my-3 list-none"
+  >
+    <a
+      :href="item._path"
+      class="text-blue-500"
     >
-      <a
-        :href="item._path"
-        class="text-blue-500"
-      >
-        {{ item.title }}
-      </a>
-    </li>
-    <ContentDoc class="prose" />
-  </NuxtLayout>
+      {{ item.title }}
+    </a>
+  </li>
 </template>
 
 <script setup>
