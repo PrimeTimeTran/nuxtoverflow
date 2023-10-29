@@ -1,6 +1,5 @@
 <template>
   <div
-    id="burger"
     @click.prevent="toggle"
     :class="{ active: isOpen }"
   >
@@ -51,7 +50,7 @@ export default {
   height: 5px;
   margin: 3px 0;
   transition: 0.4s;
-  background-color: #333;
+  background-color: white;
 }
 
 .active .bar1 {

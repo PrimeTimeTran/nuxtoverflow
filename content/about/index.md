@@ -1,38 +1,65 @@
-# Vue Blog
+# About Me
 
-Welcome to my blog. I made this to ensure I
+Hi I'm Loi. I'm a developer with 10 years experience building full stack web & mobile applications.
 
-## Stack
+I'm hungry so am always tinkering and trying to be a better version of myself not only as a developer but as a friend, brother, person.
 
-- [Vue3](https://vuejs.org/)
-- [Nuxt3](https://nuxt.com)
-- [Decap CMS](https://decapcms.org)
-- [TailwindCSS](https://tailwindui.com)
-- [Netlify](https://netlify.com)
+Technologies I regularly use follow:
 
-## Checklist
+## Frontend Frameworks
 
-An overview of the things I expect to have on each blog project
+- Vue, React, Flutter
+- Next, Nuxt, Strapi, Decap CMS, React Router, Go Router, Bloc, Redux, VueX, etc
 
-### Blog
+## Mobile
 
-- [x] Add blog posts.
-- [x] Add blog search.
-- [x] Add blog posts with mark down support.
-- [x] Add blog posts with mark down support including code blocks & syntax highlighting.
-- [x] Add blog categories.
-- [x] Add blog categories within nested routes for SEO.
-- [x] Add tags to posts.
-- [x] Add tags index page.
-- [x] Add tags search behavior.
-- [x] Add admin panel for WYSIGYW editing.
+- Flutter, React Native
+- Go Router, Bloc, React Navigation, Redux, Material, Firebase, etc
 
-### Developer Experience
+## UI libraries
 
-- [x] Add directory routing.
-- [x] Add partials to reuse logic.
+- Material, Bootstrap, Tailwind, Bulma, Vuetify, Sass, Scss, PostCSS, etc
 
+## Backend
 
-### User Experience
+- NodeJS, Ruby On Rails, .NET, Django, etc
 
-- [x] Light & Dark mode
+## Databases
+
+- SQL, MySQL, PostgresSQL, MongoDB, etc
+
+## Cloud
+
+- AWS
+  - EC2
+  - SS3
+  - Fargate
+  - Elastic Beanstalk
+
+- GCP
+  - Firebase
+  - Cloud Run
+  - App Engine
+  - GKE
+  - Cloud SQL
+
+## Tooling/Automation
+
+- Vercel
+- Netlify
+- Google Tags
+- Google Analytics
+- Google APIs(sheets, forms, drive, etc)
+- Firebase Hosting
+- Version control with Git
+- Git
+  - Actions/Workflows
+  - PR lifecycle
+  - Rebasing
+  - Amending
+  - Tagging
+  - Etc
+
+## Project Management
+
+- Jira, Notion, Trello, Click Up, Google Sheets, Google Forms

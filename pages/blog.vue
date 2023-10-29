@@ -1,34 +1,31 @@
 <template>
-  <div id="app">
-    <nav class="main-nav visible lg:block md:invisible">
-      <div class="logo text-white">Nuxt Blog</div>
-      <menu-burger
-        :isOpen="isOpen"
-        @toggled="handleToggle"
-      />
-    </nav>
-    <menu-sidebar
-      :isOpen="isOpen"
-      @toggled="handleToggle"
-    >
-      <menu-table-of-contents :categories="categories" />
-    </menu-sidebar>
-  </div>
   <div class="flex flex-row min-h-full">
     <div
       class="flex flex-col bg-gray-100 p-3 min-h-screen hidden invisible lg:block lg:visible"
     >
       <menu-table-of-contents :categories="categories" />
     </div>
-    <div class="flex pt-24 sm:px-0 md:px-6 visible">
+    <div class="flex px-0 md:px-6 visible pt-24">
       <ContentDoc class="prose" />
+      <nav
+        class="main-nav visible lg:block md:invisible rounded border-blue-600 border-2 z-10 shadow"
+      >
+        <menu-burger
+          :isOpen="isOpen"
+          @toggled="handleToggle"
+        />
+      </nav>
+      <menu-sidebar
+        :isOpen="isOpen"
+        @toggled="handleToggle"
+      >
+        <menu-table-of-contents :categories="categories" />
+      </menu-sidebar>
     </div>
   </div>
 </template>
 
 <script setup>
-const name = useState('name')
-const counter = useState('counter')
 const { gtag } = useGtag()
 gtag('event', 'screen_view', {
   app_name: 'Nuxt-Blog',
@@ -48,8 +45,12 @@ const handleToggle = () => {
 
 <style scoped>
 .main-nav {
+  right: 10px;
+  bottom: 10px;
   display: flex;
+  position: fixed;
   padding: 0.5rem 0.8rem;
   justify-content: space-between;
+  background-color: rgba(19, 15, 64);
 }
 </style>

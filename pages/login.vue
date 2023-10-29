@@ -93,9 +93,6 @@ gtag('event', 'screen_view', {
   app_name: 'Nuxt-Blog',
   screen_name: 'About',
 })
-if (process.browser) {
-  window.scrollTo(0, document.body.scrollHeight)
-}
 definePageMeta({
   layout: 'custom',
 })
