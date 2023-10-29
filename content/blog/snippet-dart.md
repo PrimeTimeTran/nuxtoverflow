@@ -3,7 +3,7 @@ createdAt: 2023-10-28
 title: Better switch statements in Dart
 description: A better approach than a switch statement.
 ---
-
+# Checkout this switch
 
 
 ```dart
