@@ -1,8 +1,8 @@
 ---
 createdAt: 2023-10-28
-title: Widgets
+title: Flutter Widgets
+shortName: Widgets
 description: Interesting widgets
 ---
 
-
-## Flutter Widgets
+# Widgets in Flutter

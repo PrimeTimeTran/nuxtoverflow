@@ -68,6 +68,7 @@ collections:
           time_format: false,
         }
       - { label: 'Title', name: 'title', widget: 'string', required: true }
+      - { label: 'Short Name', name: 'shortName', widget: 'string' }
       - {
           label: 'Description',
           name: 'description',

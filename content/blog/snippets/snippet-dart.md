@@ -4,7 +4,7 @@ title: Better switch statements in Dart
 description: A better approach than a switch statement.
 ---
 
-
+# Better than Switch | Dart
 
 ```dart
 getHouse(name) {

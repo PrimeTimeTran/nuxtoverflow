@@ -4,6 +4,4 @@ title: React Native
 description: React Native
 ---
 
-## React Native Concepts
-
-### React Native
+# React Native

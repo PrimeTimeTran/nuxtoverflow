@@ -4,7 +4,7 @@ title: Decap CMS & Nuxt
 description: This content is pretty cool
 ---
 
-## Decap CMS with Nuxt
+# Decap CMS with Nuxt
 
 - [Vue](https://vuejs.org/)
 - [Nuxt](https://nuxt.com/)

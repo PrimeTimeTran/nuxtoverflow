@@ -1,8 +1,8 @@
 ---
 createdAt: 2023-10-28
-title: Styling
+title: Flutter Styles
+shortName: Styling
 description: Interesting Styles
 ---
 
-
-## Flutter Styles
+# Styling in Flutter

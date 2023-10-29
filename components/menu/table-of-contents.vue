@@ -1,5 +1,5 @@
 <template>
-  <div class="pt-24">
+  <div class="md:pt-24">
     <li
       v-for="category in categories[1].children"
       class="list-none"
@@ -16,11 +16,12 @@
             class="list-none ml-6"
             v-for="child in category.children.slice(1)"
           >
+            >
             <NuxtLink
               :href="child._path"
               class="text-blue-500"
             >
-              {{ child.title }}
+              {{ child.shortName != null ? child.shortName : child.title }}
             </NuxtLink>
           </li>
         </div>

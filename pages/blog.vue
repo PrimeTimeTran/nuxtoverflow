@@ -31,9 +31,11 @@ gtag('event', 'screen_view', {
   app_name: 'Nuxt-Blog',
   screen_name: 'Blog',
 })
+
 const { data: navigation } = await useAsyncData('navigation', () =>
   fetchContentNavigation()
 )
+
 let categories = navigation
 
 const { isOpen, toggleOpen } = useToggleOpen()
