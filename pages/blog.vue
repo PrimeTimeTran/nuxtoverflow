@@ -1,12 +1,4 @@
 <template>
-  <!-- <div class="flex flex-row min-h-full">
-    <div class="flex flex-col bg-gray-100 p-3 min-h-screen">
-      <table-of-contents :categories="categories" />
-    </div>
-    <div class="flex pt-24 px-6">
-      <ContentDoc class="prose" />
-    </div>
-  </div> -->
   <div id="app">
     <nav class="main-nav">
       <div class="logo">my.company</div>
@@ -15,27 +7,31 @@
         @toggled="handleToggleOpen"
       />
     </nav>
-
     <menu-sidebar
       :isOpen="isOpen"
       @toggled="handleToggleOpen"
     >
-      <ul class="sidebar-panel-nav">
-        <li>
-          <a href="#home">Home</a>
-        </li>
-        <li>
-          <a href="#about">About</a>
-        </li>
-        <li>
-          <a href="#contact">Contact</a>
-        </li>
-      </ul>
+      <menu-table-of-contents :categories="categories" />
     </menu-sidebar>
+  </div>
+  <div class="flex flex-row min-h-full">
+    <div
+      class="flex flex-col bg-gray-100 p-3 min-h-screen hidden invisible lg:block lg:visible"
+    >
+      <menu-table-of-contents :categories="categories" />
+    </div>
+    <div class="flex pt-24 px-6 visible">
+      <ContentDoc class="prose" />
+    </div>
   </div>
 </template>
 
 <script setup>
+const { data: navigation } = await useAsyncData('navigation', () =>
+  fetchContentNavigation()
+)
+let categories = navigation
+
 const { isOpen, toggleOpen } = useToggleOpen()
 
 const handleToggleOpen = () => {
@@ -43,21 +39,6 @@ const handleToggleOpen = () => {
   toggleOpen()
 }
 </script>
-
-<!-- <script setup>
-const { data: navigation } = await useAsyncData('navigation', () =>
-  fetchContentNavigation()
-)
-let categories = navigation
-
-// https://regenrek.com/posts/how-to-create-an-animated-vue-sidebar-menu-with-vue-observable/
-
-let isOpen = false
-const toggleOpen = () => {
-  console.log('toglging')
-  isOpen = !isOpen
-}
-</script> -->
 
 <style scoped>
 html {
