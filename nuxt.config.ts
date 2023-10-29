@@ -31,9 +31,6 @@ export default defineNuxtConfig({
       preload: ['dart', 'python', 'javascript'],
       theme: {
         default: 'github-dark',
-        dark: 'github-dark',
-        sepia: 'monokai',
-        light: 'github-light',
       },
     },
   },

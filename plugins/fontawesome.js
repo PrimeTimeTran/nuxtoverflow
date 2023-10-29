@@ -11,6 +11,7 @@ import {
   faBlog,
   faUser,
   faTags,
+  faCopy,
   faHouse,
   faSignOut,
   faHamburger,
@@ -21,6 +22,7 @@ import {
 library.add(
   faBlog,
   faBars,
+  faCopy,
   faTags,
   faUser,
   faHouse,
