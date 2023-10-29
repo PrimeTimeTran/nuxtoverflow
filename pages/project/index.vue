@@ -18,7 +18,9 @@
 <script setup>
 let projects = await queryContent('project').find()
 projects.pop()
-console.log({
-  projects,
+const { gtag } = useGtag()
+gtag('event', 'screen_view', {
+  app_name: 'Nuxt-Blog',
+  screen_name: 'Projects',
 })
 </script>

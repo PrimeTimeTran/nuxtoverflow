@@ -88,8 +88,11 @@
 </template>
 
 <script setup>
-// Todo:
-// Fix the extra height on login page
+const { gtag } = useGtag()
+gtag('event', 'screen_view', {
+  app_name: 'Nuxt-Blog',
+  screen_name: 'About',
+})
 if (process.browser) {
   window.scrollTo(0, document.body.scrollHeight)
 }

@@ -7,7 +7,9 @@
 </template>
 
 <script setup>
-console.log({
-  hello: 'world',
+const { gtag } = useGtag()
+gtag('event', 'screen_view', {
+  app_name: 'Nuxt-Blog',
+  screen_name: 'Blog/BlogPost',
 })
 </script>

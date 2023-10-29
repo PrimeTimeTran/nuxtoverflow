@@ -49,6 +49,8 @@
       name="Contact"
       action="/thankyou"
       @submit.prevent="sendForm"
+      data-netlify-recaptcha="true"
+      data-netlify-honeypot="bot-field"
       class="bg-gray-200 p-16 mt-16 rounded flex flex-col justify-center align-middle"
     >
       <input
