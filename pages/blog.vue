@@ -27,6 +27,8 @@
 </template>
 
 <script setup>
+const name = useState('name')
+const counter = useState('counter')
 const { gtag } = useGtag()
 gtag('event', 'screen_view', {
   app_name: 'Nuxt-Blog',

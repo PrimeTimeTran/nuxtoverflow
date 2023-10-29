@@ -1,4 +1,4 @@
-# Loi Tran's Vue Blog
+# My Vue/Nuxt Blog
 
 Welcome. Thank you for taking the time to visit. Please have a look around.
 
