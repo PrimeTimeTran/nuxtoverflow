@@ -1,16 +1,16 @@
 <template>
   <div class="sidebar">
     <div
+      v-if="isOpen"
       class="sidebar-backdrop"
       @click="$emit('toggled')"
-      v-if="isOpen"
-    ></div>
+    />
     <transition name="slide">
       <div
         v-if="isOpen"
         class="sidebar-panel"
       >
-        <slot></slot>
+        <slot />
       </div>
     </transition>
   </div>
@@ -20,7 +20,7 @@ const props = defineProps(['isOpen'])
 const emit = defineEmits(['toggled'])
 </script>
 
-<style scoped>
+<style>
 .slide-enter-active,
 .slide-leave-active {
   transition: transform 0.2s ease;
@@ -33,24 +33,24 @@ const emit = defineEmits(['toggled'])
 }
 
 .sidebar-backdrop {
-  background-color: rgba(19, 15, 64, 0.4);
-  width: 100vw;
-  height: 100vh;
-  position: fixed;
   top: 0;
   left: 0;
+  width: 100vw;
+  height: 100vh;
   cursor: pointer;
+  position: fixed;
+  background-color: rgba(19, 15, 64, 0.4);
 }
 
 .sidebar-panel {
+  top: 0;
+  left: 0;
+  z-index: 999;
+  width: 300px;
+  height: 100vh;
+  position: fixed;
   overflow-y: auto;
   background-color: #130f40;
-  position: fixed;
-  left: 0;
-  top: 0;
-  height: 100vh;
-  z-index: 999;
   padding: 3rem 20px 2rem 20px;
-  width: 300px;
 }
 </style>

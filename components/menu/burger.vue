@@ -1,110 +1,68 @@
 <template>
   <div
     id="burger"
+    @click.prevent="toggle"
     :class="{ active: isOpen }"
-    @click="$emit('toggled')"
   >
-    <slot>
-      <button
-        type="button"
-        class="burger-button"
-        title="Menu"
-      >
-        <span class="hidden">Toggle menu</span>
-        <span class="burger-bar burger-bar--1"></span>
-        <span class="burger-bar burger-bar--2"></span>
-        <span class="burger-bar burger-bar--3"></span>
-      </button>
-    </slot>
+    <div class="bar1"></div>
+    <div class="bar2"></div>
+    <div class="bar3"></div>
   </div>
 </template>
+
 <script setup>
 import { ref } from 'vue'
 const props = defineProps(['isOpen'])
 const emit = defineEmits(['toggled'])
-
-const isOpen = ref(props.isOpen)
+let isOpen = ref(props.isOpen)
+watch(
+  () => props.isOpen,
+  (newValue) => {
+    isOpen.value = newValue
+  }
+)
 </script>
-<style scoped>
-.hidden {
-  visibility: hidden;
-}
 
-button {
+<script>
+export default {
+  data() {
+    return {
+      change: false,
+    }
+  },
+  methods: {
+    toggle() {
+      this.$emit('toggled')
+      this.change = !this.change
+    },
+  },
+}
+</script>
+<style>
+.hamburger {
   cursor: pointer;
+  display: inline-block;
 }
 
-/* remove blue outline */
-button:focus {
-  outline: 0;
+.bar1,
+.bar2,
+.bar3 {
+  width: 30px;
+  height: 5px;
+  margin: 3px 0;
+  transition: 0.4s;
+  background-color: #333;
 }
 
-.burger-button {
-  position: relative;
-  height: 30px;
-  width: 32px;
-  display: block;
-  z-index: 999;
-  border: 0;
-  border-radius: 0;
-  background-color: transparent;
-  pointer-events: all;
-  transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+.active .bar1 {
+  transform: translate(0, 8px) rotate(-45deg);
 }
 
-.burger-bar {
-  background-color: #130f40;
-  position: absolute;
-  top: 50%;
-  right: 6px;
-  left: 6px;
-  height: 2px;
-  width: auto;
-  margin-top: -1px;
-  transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1),
-    opacity 0.3s cubic-bezier(0.165, 0.84, 0.44, 1),
-    background-color 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
-}
-
-.burger-bar--1 {
-  -webkit-transform: translateY(-6px);
-  transform: translateY(-6px);
-}
-
-.burger-bar--2 {
-  transform-origin: 100% 50%;
-  transform: scaleX(0.8);
-}
-
-.burger-button:hover .burger-bar--2 {
-  transform: scaleX(1);
-}
-
-.no-touchevents .burger-bar--2:hover {
-  transform: scaleX(1);
-}
-
-.burger-bar--3 {
-  transform: translateY(6px);
-}
-
-#burger.active .burger-button {
-  transform: rotate(-180deg);
-}
-
-#burger.active .burger-bar {
-  background-color: #fff;
-}
-
-#burger.active .burger-bar--1 {
-  transform: rotate(45deg);
-}
-
-#burger.active .burger-bar--2 {
+.active .bar2 {
   opacity: 0;
 }
 
-#burger.active .burger-bar--3 {
-  transform: rotate(-45deg);
+.active .bar3 {
+  transform: translate(0, -8px) rotate(45deg);
 }
 </style>

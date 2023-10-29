@@ -1,15 +1,15 @@
 <template>
   <div id="app">
-    <nav class="main-nav">
-      <div class="logo">my.company</div>
+    <nav class="main-nav visible lg:block md:invisible">
+      <div class="logo text-white">Nuxt Blog</div>
       <menu-burger
         :isOpen="isOpen"
-        @toggled="handleToggleOpen"
+        @toggled="handleToggle"
       />
     </nav>
     <menu-sidebar
       :isOpen="isOpen"
-      @toggled="handleToggleOpen"
+      @toggled="handleToggle"
     >
       <menu-table-of-contents :categories="categories" />
     </menu-sidebar>
@@ -20,7 +20,7 @@
     >
       <menu-table-of-contents :categories="categories" />
     </div>
-    <div class="flex pt-24 px-6 visible">
+    <div class="flex pt-24 sm:px-0 md:px-6 visible">
       <ContentDoc class="prose" />
     </div>
   </div>
@@ -34,55 +34,15 @@ let categories = navigation
 
 const { isOpen, toggleOpen } = useToggleOpen()
 
-const handleToggleOpen = () => {
-  console.log('toggling!')
+const handleToggle = () => {
   toggleOpen()
 }
 </script>
 
 <style scoped>
-html {
-  height: 100%;
-  overflow: hidden;
-}
-
-body {
-  border: 0;
-  margin: 0;
-  padding: 0;
-  font-family: 'Lato';
-  height: 100%;
-  background: rgb(101, 31, 87);
-  background: linear-gradient(
-    45deg,
-    rgba(101, 31, 87, 1) 0%,
-    rgba(225, 113, 87, 1) 48%,
-    rgba(249, 248, 113, 1) 100%
-  );
-}
-
-.logo {
-  align-self: center;
-  color: #fff;
-  font-weight: bold;
-  font-family: 'Lato';
-}
-
 .main-nav {
   display: flex;
-  justify-content: space-between;
   padding: 0.5rem 0.8rem;
-}
-
-ul.sidebar-panel-nav {
-  list-style-type: none;
-}
-
-ul.sidebar-panel-nav > li > a {
-  color: #fff;
-  text-decoration: none;
-  font-size: 1.5rem;
-  display: block;
-  padding-bottom: 0.5em;
+  justify-content: space-between;
 }
 </style>
