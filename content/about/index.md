@@ -9,7 +9,7 @@ Technologies I regularly use follow:
 ## Frontend Frameworks
 
 - Vue, React, Flutter
-- Next, Nuxt, Strapi, Decap CMS, React Router, Go Router, Bloc, Redux, VueX, etc
+- React Router, Go Router, Bloc, Redux, VueX, etc
 
 ## Mobile
 
@@ -22,11 +22,12 @@ Technologies I regularly use follow:
 
 ## Backend
 
-- NodeJS, Ruby On Rails, .NET, Django, etc
+- NodeJS, Ruby On Rails, .NET, Django, Next, Nuxt, Strapi, Decap CMS, etc
+- Sequelize, Mongoose, Node-Schedule, Bull, Active Record, Active Jobs, Active Admin, Active Storage, Action Cable,
 
 ## Databases
 
-- SQL, MySQL, PostgresSQL, MongoDB, etc
+- SQL, MySQL, PostgresSQL, MongoDB, Redisetc
 
 ## Cloud
 

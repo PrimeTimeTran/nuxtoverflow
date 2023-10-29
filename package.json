@@ -11,6 +11,7 @@
   },
   "devDependencies": {
     "@nuxt/devtools": "latest",
+    "@types/node-schedule": "^2.1.2",
     "autoprefixer": "^10.4.16",
     "nuxt": "^3.8.0",
     "postcss": "^8.4.31",
@@ -27,7 +28,10 @@
     "@fortawesome/vue-fontawesome": "^3.0.3",
     "@nuxt/content": "^2.9.0",
     "@tailwindcss/typography": "^0.5.10",
+    "nitropack": "^2.7.2",
+    "node-schedule": "^2.1.1",
     "nuxt-gtag": "^1.1.1",
+    "nuxt-mongoose": "^1.0.3",
     "unhead": "^1.8.0",
     "vue-gtag": "^2.0.1"
   }

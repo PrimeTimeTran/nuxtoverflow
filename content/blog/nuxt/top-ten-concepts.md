@@ -12,3 +12,4 @@ description: Top 10 Nuxt Concepts
 - Composables are for accessing global state and function like useState from React
 - Components are where generic components/templates are stored & used.
 - Plugins are for configuring 3rd party libraries you use in your app.
+- Nuxt is a full stack framework. It can return responses from API requests, query databases, background workers & more
