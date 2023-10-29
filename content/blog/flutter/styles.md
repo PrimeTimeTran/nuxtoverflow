@@ -1,6 +1,6 @@
 ---
 createdAt: 2023-10-28
-title: Flutter Styling
+title: Styling
 description: Interesting Styles
 ---
 

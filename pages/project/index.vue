@@ -1,16 +1,18 @@
 <template>
-  <ContentDoc class="prose" />
-  <li
-    v-for="item in projects"
-    class="my-3 list-none"
-  >
-    <a
-      :href="item._path"
-      class="text-blue-500"
+  <div class="pt-24">
+    <ContentDoc class="prose" />
+    <li
+      v-for="item in projects"
+      class="my-3 list-none"
     >
-      {{ item.title }}
-    </a>
-  </li>
+      <a
+        :href="item._path"
+        class="text-blue-500"
+      >
+        {{ item.title }}
+      </a>
+    </li>
+  </div>
 </template>
 
 <script setup>

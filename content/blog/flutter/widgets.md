@@ -1,6 +1,6 @@
 ---
 createdAt: 2023-10-28
-title: Flutter Widgets
+title: Widgets
 description: Interesting widgets
 ---
 

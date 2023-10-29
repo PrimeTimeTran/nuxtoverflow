@@ -30,24 +30,15 @@
         </div>
 
         <div>
-          <p class="font-semibold text-gray-800 dark:text-white">Quick Link</p>
-
+          <p class="font-semibold text-gray-800 dark:text-white">Frameworks</p>
           <div class="flex flex-col items-start mt-5 space-y-2">
-            <p
+            <NuxtLink
+              v-for="item in frameworks"
               class="text-gray-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-blue-400 hover:underline hover:cursor-pointer hover:text-blue-500"
+              :href="item.url"
             >
-              Home
-            </p>
-            <p
-              class="text-gray-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-blue-400 hover:underline hover:cursor-pointer hover:text-blue-500"
-            >
-              Who We Are
-            </p>
-            <p
-              class="text-gray-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-blue-400 hover:underline hover:cursor-pointer hover:text-blue-500"
-            >
-              Our Philosophy
-            </p>
+              {{ item.name }}
+            </NuxtLink>
           </div>
         </div>
 
@@ -55,21 +46,12 @@
           <p class="font-semibold text-gray-800 dark:text-white">Industries</p>
 
           <div class="flex flex-col items-start mt-5 space-y-2">
-            <p
+            <NuxtLink
+              v-for="item in backends"
               class="text-gray-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-blue-400 hover:underline hover:cursor-pointer hover:text-blue-500"
             >
-              Retail & E-Commerce
-            </p>
-            <p
-              class="text-gray-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-blue-400 hover:underline hover:cursor-pointer hover:text-blue-500"
-            >
-              Information Technology
-            </p>
-            <p
-              class="text-gray-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-blue-400 hover:underline hover:cursor-pointer hover:text-blue-500"
-            >
-              Finance & Insurance
-            </p>
+              {{ item }}
+            </NuxtLink>
           </div>
         </div>
       </div>
@@ -78,12 +60,16 @@
 
       <div class="sm:flex sm:items-center sm:justify-between">
         <div class="flex flex-1 gap-4 hover:cursor-pointer">
-          <img
-            src="https://www.svgrepo.com/show/303139/google-play-badge-logo.svg"
-            width="130"
-            height="110"
-            alt=""
-          />
+          <a
+            href="https://play.google.com/store/apps/developer?id=PrimeTimeTran"
+          >
+            <img
+              src="https://www.svgrepo.com/show/303139/google-play-badge-logo.svg"
+              width="130"
+              height="110"
+              alt=""
+            />
+          </a>
           <img
             src="https://www.svgrepo.com/show/303128/download-on-the-app-store-apple-logo.svg"
             width="130"
@@ -140,10 +126,56 @@
         </div>
       </div>
       <p
-        class="font-sans p-8 text-start md:text-center md:text-lg md:p-4 text-black"
+        class="font-sans p-8 text-start md:text-center md:text-lg md:p-4 text-gray-600"
       >
-        © 2023 You Company Inc. All rights reserved.
+        © {{ currentYear }}
+        <a
+          href="https://ltran.net"
+          class="text-gray-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-blue-400 hover:underline hover:cursor-pointer hover:text-blue-500"
+        >
+          PrimeTimeTran
+        </a>
+        . All rights reserved.
       </p>
     </div>
   </footer>
 </template>
+
+<script>
+import { faYammer } from '@fortawesome/free-brands-svg-icons'
+
+export default {
+  data() {
+    return {
+      frameworks: [
+        {
+          name: 'React',
+          url: 'https://react-blog.ltran.net/',
+        },
+        {
+          name: 'Vue',
+          url: 'https://nuxt-blog.ltran.net/',
+        },
+        {
+          name: 'Svelte',
+          url: 'https://svelte-blog.ltran.net/',
+        },
+        {
+          name: 'Next',
+          url: 'https://strapi-blog.ltran.net/',
+        },
+        {
+          name: 'Flutter',
+          url: '',
+        },
+      ],
+      backends: ['NodeJS', 'Ruby On Rails', 'Djano', '.NET'],
+    }
+  },
+  computed: {
+    currentYear() {
+      return new Date().getFullYear()
+    },
+  },
+}
+</script>

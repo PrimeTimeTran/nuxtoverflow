@@ -4,8 +4,8 @@
     <div class="w-1/2 h-screen hidden lg:block">
       <img
         alt="Placeholder Image"
-        src="https://placehold.co/800x/667fff/ffffff.png?text=Your+Image&font=Montserrat"
-        class="object-cover w-full h-full"
+        src="https://blog.calameo.com/wp-content/uploads/2022/01/beasty-hktkNOBN8y8-unsplash-scaled.jpg"
+        class="object-fit w-full h-full"
       />
     </div>
     <!-- Right: Login Form -->
