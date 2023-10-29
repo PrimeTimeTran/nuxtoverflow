@@ -20,14 +20,16 @@
 #       - { label: 'Description', name: 'description', widget: 'string' }
 #       - { label: 'Body', name: 'body', widget: 'markdown' }
 
-site_url: https://nuxt3-decap-blog.netlify.app/
-logo_url: https://nuxt3-decap-blog.netlify.app/icon.png
+site_url: https://ltran.net/
+logo_url: https://ltran.net/icon.png
 
 publish_mode: editorial_workflow
 backend:
+  branch: main
   name: git-gateway
-  branch: master
   squash_merges: true
+  site_domain: https://ltran.net
+  repo: PrimeTimeTran/nuxt3-decap-blog
 
 # used together with `npx netlify-cms-proxy-server`. https://www.netlifycms.org/docs/beta-features/#working-with-a-local-git-repository
 local_backend: true

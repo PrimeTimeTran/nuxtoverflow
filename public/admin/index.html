@@ -7,11 +7,14 @@
       content="width=device-width, initial-scale=1.0"
     />
     <title>Content Manager</title>
-    <!-- Include the script that enables Netlify Identity on this page. -->
     <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+    <link
+      type="text/yaml"
+      href="./config.yml"
+      rel="cms-config-url"
+    />
   </head>
   <body>
-    <!-- Include the script that builds the page and powers Decap CMS -->
     <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
     <script>
       CMS.registerPreviewStyle('/admin/admin.css')

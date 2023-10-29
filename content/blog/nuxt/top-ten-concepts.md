@@ -1,3 +1,9 @@
+---
+createdAt: 2023-10-29
+title: Top 10 Nuxt Concepts
+description: Top 10 Nuxt Concepts
+---
+
 # Top Ten things you have to know about nuxt to be successful
 
 - Site routes are defined using a tree like structure starting from the ./pages folder.
