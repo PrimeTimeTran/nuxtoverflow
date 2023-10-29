@@ -1,25 +1,3 @@
-# backend:
-#   name: git-gateway
-#   branch: main
-
-# media_folder: static/img
-# public_folder: /img
-
-# collections:
-#   - name: 'blog'
-#     label: 'Blog'
-#     folder: 'content/blog'
-#     format: 'frontmatter'
-#     create: true
-#     slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
-#     editor:
-#       preview: false
-#     fields:
-#       - { label: 'Title', name: 'title', widget: 'string' }
-#       - { label: 'Publish Date', name: 'date', widget: 'datetime' }
-#       - { label: 'Description', name: 'description', widget: 'string' }
-#       - { label: 'Body', name: 'body', widget: 'markdown' }
-
 site_url: https://ltran.net/
 logo_url: https://ltran.net/icon.png
 
