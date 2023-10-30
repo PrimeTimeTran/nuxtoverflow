@@ -11,7 +11,7 @@
       />
       <label
         for="light-switch"
-        class="relative cursor-pointer p-2"
+        class="relative cursor-pointer p-2 hover:text-gray-900 hover:border-b-2 hover:border-b-gray-900 dark:hover:text-yellow-500 dark:hover:border-b-2 dark:hover:border-b-gray-500"
       >
         <svg
           width="16"
@@ -29,7 +29,7 @@
     </div>
     <NuxtLink
       href="/login"
-      class="flex items-center text-gray-500 dark:text-white hover:text-blue-500 cursor-pointer transition-colors duration-300 py-3"
+      class="flex items-center text-gray-500 dark:text-white hover:text-gray-900 hover:border-b-2 hover:border-b-gray-900 dark:hover:border-b-white cursor-pointer transition-colors duration-300 py-3"
     >
       <svg
         width="24"
@@ -50,7 +50,7 @@
 
     <NuxtLink
       href="/login"
-      class="flex items-center text-gray-500 dark:text-white hover:text-blue-500 cursor-pointer transition-colors duration-300 py-3"
+      class="flex items-center text-gray-500 dark:text-white hover:text-gray-900 hover:border-b-2 hover:border-b-gray-900 dark:hover:border-b-white cursor-pointer transition-colors duration-300 py-3"
     >
       <font-awesome-icon
         icon="fa-solid fa-sign-out"

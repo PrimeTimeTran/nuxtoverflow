@@ -9,3 +9,8 @@ description: This content is pretty cool
 - [Vue](https://vuejs.org/)
 - [Nuxt](https://nuxt.com/)
 - [Tailwind](https://nerdcave.com/tailwind-cheat-sheet)
+
+
+
+## Links
+https://decapcms.org/docs/beta-features/#nested-collections

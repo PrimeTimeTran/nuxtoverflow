@@ -10,7 +10,7 @@
       >
         <NuxtLink
           :href="category._path"
-          class="text-gray-500 hover:text-gray-100"
+          class="text-gray-100 hover:text-gray-500"
         >
           {{ category.title }}
         </NuxtLink>
@@ -23,7 +23,7 @@
               :href="child._path"
               class="text-gray-500 hover:text-gray-100 ml-6 min-w-full"
             >
-              {{ child.shortName != null ? child.shortName : child.title }}
+              {{ child.title }}
             </NuxtLink>
             <div
               class="w-1/12 border-b-white border-b overflow-visible relative bottom-3"

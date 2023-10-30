@@ -2,3 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+/* TODO: Fix section navigation hiding under navbar */
+/* https://css-tricks.com/hash-tag-links-padding/ */
+a[href^="#"] {
+  
+}

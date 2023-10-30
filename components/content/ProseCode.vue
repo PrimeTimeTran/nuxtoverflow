@@ -1,6 +1,9 @@
 <template>
   <div class="container pt-1 rounded-xl">
-    <div class="flex justify-between border-b-2 border-gray-600 p-1">
+    <div
+      v-if="filename || languageText"
+      class="flex justify-between border-b-2 border-gray-600 p-1"
+    >
       <span
         v-if="filename"
         class="file-name-text ml-3 text-gray-600"

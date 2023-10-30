@@ -16,16 +16,32 @@
 </template>
 
 <script>
+import { ref, watch, onMounted } from 'vue'
 import { useDark } from '@vueuse/core'
-const isDark = useDark()
 
 export default {
-  computed: {
-    imageSource() {
-      return isDark.value
-        ? 'https://i.imgur.com/D0epYhy.png'
-        : 'https://stackoverflow.design/assets/img/logos/so/logo-stackoverflow.svg'
-    },
+  setup() {
+    const isDark = useDark()
+    const imageSource = ref('https://i.imgur.com/XOSnv20.png')
+
+    const initializeImageSource = () => {
+      imageSource.value = isDark.value
+        ? 'https://i.imgur.com/QgWZit7.png'
+        : 'https://i.imgur.com/XOSnv20.png'
+    }
+
+    onMounted(() => {
+      initializeImageSource()
+    })
+
+    // Watch for changes in dark mode and update imageSource accordingly
+    watch(isDark, () => {
+      initializeImageSource()
+    })
+
+    return {
+      imageSource,
+    }
   },
 }
 </script>

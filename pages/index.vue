@@ -1,7 +1,7 @@
 <template>
   <div class="pt-24">
     <ContentDoc class="prose dark:prose-invert" />
-    <h2>Contact Form</h2>
+    <h2 class="text-3xl mt-24">Contact Form</h2>
     <form
       netlify
       method="post"

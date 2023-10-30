@@ -2,7 +2,7 @@
 createdAt: 2023-10-29
 title: Nuxt
 description: Nuxt
-
+tags: Nuxt, Vue, Full Stack
 # https://mokkapps.de/blog/focus-and-code-diff-in-nuxt-content-code-blocks
 # https://mokkapps.de/blog/how-to-create-a-custom-code-block-with-nuxt-content-v2
 ---

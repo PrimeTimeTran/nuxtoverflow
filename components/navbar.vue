@@ -7,7 +7,7 @@
   >
     <navbar-scroll-spy :percent="percent" />
     <nav
-      class="fixed top-0 left-0 right-0 z-10 w-full flex flex-wrap items-center justify-around bg-white dark:bg-slate-800 backdrop-blur-md shadow-md"
+      class="fixed top-0 left-0 right-0 z-10 w-screen flex flex-wrap items-center justify-around bg-white dark:bg-slate-800 backdrop-blur-md shadow-md"
     >
       <div
         class="container px-4 mx-auto flex flex-wrap items-center justify-between"

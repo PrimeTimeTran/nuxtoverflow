@@ -1,17 +1,27 @@
+---
+createdAt: 2023-10-30
+title: Markdown Syntax
+shortName: Markdown Syntax
+---
 # Markdown
 
 ## Headings
 
 # Heading 1
+
 ## Heading 2
+
 ### Heading 3
+
 #### Heading 4
+
 ##### Heading 5
+
 ###### Heading 6
 
 ## Formatting
 
-The _quick_ brown fox **jumps** over the ~lazy~ dog.
+The *quick* brown fox **jumps** over the \~lazy\~ dog.
 
 ## Ordered List
 
@@ -21,19 +31,19 @@ The _quick_ brown fox **jumps** over the ~lazy~ dog.
 
 ## Unordered List
 
-- JS
-- TS
-- Python
+* JS
+* TS
+* Python
 
 ## Code Blocks
 
-```dart [src/index.js] {2-3}
+```dart
 void helloWorld() {
   print('Hello World')
 }
 ```
 
-```dart [src/index.js] {2-5}
+```dart
 void helloWorld() {
   print('Hello World')
   print('Hello World')
@@ -43,7 +53,7 @@ void helloWorld() {
 }
 ```
 
-```javascript [./pages/index.vue] {3-5}
+```javascript
 <template>
   <div class="pt-24">
     <ContentDoc class="prose dark:prose-invert" />
@@ -51,6 +61,7 @@ void helloWorld() {
   </div>
 </template>
 ```
+
 > If you don't stand for something you'll fall for anything.
 
 ## Images
@@ -61,23 +72,40 @@ void helloWorld() {
 
 ![](https://i.giphy.com/media/4pMX5rJ4PYAEM/giphy.webp)
 
-
 ## Tables
 
-
 | Tables        | Are           | Cool  |
-| ------------- |:-------------:| -----:|
+| ------------- | ------------- | ----- |
 | col 3 is      | right-aligned | $1600 |
-| col 2 is      | centered      |   $12 |
-| zebra stripes | are neat      |    $1 |
+| col 2 is      | centered      | $12   |
+| zebra stripes | are neat      | $1    |
 
 Colons can be used to align columns.
 
-Markdown | Less | Pretty
---- | --- | ---
-*Still* | `renders` | **nicely**
-1 | 2 | 3
+| Markdown | Less      | Pretty     |
+| -------- | --------- | ---------- |
+| *Still*  | `renders` | **nicely** |
+| 1        | 2         | 3          |
 
 There must be at least 3 dashes separating each header cell.
 The outer pipes (|) are optional, and you don't need to make the 
 raw Markdown line up prettily. You can also use inline Markdown.
+
+## Dropdowns
+
+<details>
+  <summary>Click me</summary>
+  
+  ### Heading
+  1. Foo
+  2. Bar
+     * Baz
+     * Qux
+
+  ### Some Javascript
+  ```js
+  function logSomething(something) {
+    console.log('Something', something);
+  }
+  ```
+</details>
