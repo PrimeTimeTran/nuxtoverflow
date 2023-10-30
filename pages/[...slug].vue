@@ -1,3 +1,3 @@
 <template>
-  <ContentDoc class="prose" />
+  <ContentDoc class="prose dark:prose-invert" />
 </template>

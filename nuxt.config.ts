@@ -1,7 +1,12 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: true },
-  modules: ['@nuxt/content', 'nuxt-gtag', 'nuxt-mongoose'],
+  modules: [
+    '@nuxt/content',
+    'nuxt-gtag',
+    'nuxt-mongoose',
+    '@nuxtjs/color-mode',
+  ],
   gtag: {
     id: 'G-M00JRG1H9T',
     config: {

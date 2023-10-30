@@ -46,7 +46,7 @@ void helloWorld() {
 ```javascript [./pages/index.vue] {3-5}
 <template>
   <div class="pt-24">
-    <ContentDoc class="prose" />
+    <ContentDoc class="prose dark:prose-invert" />
     <h2>Contact Form</h2>
   </div>
 </template>

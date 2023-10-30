@@ -4,7 +4,7 @@
       :href="item.url"
       :key="item.name"
       v-for="item in navItems"
-      class="flex items-center text-gray-500 hover:text-blue-500 cursor-pointer transition-colors duration-300 px-12 text-xs font-bold hover:opacity-75 py-3"
+      class="flex items-center text-gray-500 dark:text-white hover:text-blue-500 cursor-pointer transition-colors duration-300 px-12 text-xs font-bold hover:opacity-75 py-3"
     >
       <font-awesome-icon
         :icon="item.icon"

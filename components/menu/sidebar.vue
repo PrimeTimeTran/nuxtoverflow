@@ -1,5 +1,5 @@
 <template>
-  <div class="sidebar">
+  <div class="sidebar w-44">
     <div
       v-if="isOpen"
       class="sidebar-backdrop"
@@ -8,7 +8,7 @@
     <transition name="slide">
       <div
         v-if="isOpen"
-        class="sidebar-panel"
+        class="sidebar-panel min-w-full"
       >
         <slot />
       </div>
@@ -46,7 +46,6 @@ const emit = defineEmits(['toggled'])
   top: 0;
   left: 0;
   z-index: 999;
-  width: 300px;
   height: 100vh;
   position: fixed;
   overflow-y: auto;

@@ -1,6 +1,6 @@
 ---
 createdAt: 2023-10-28
-title: Markdown content in Decap CMS & Nuxt
+title: MD in Decap CMS & Nuxt
 description: This content is pretty cool
 ---
 

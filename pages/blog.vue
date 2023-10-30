@@ -1,12 +1,12 @@
 <template>
   <div class="flex flex-row min-h-full">
     <div
-      class="flex flex-col bg-gray-100 p-3 min-h-screen hidden invisible lg:block lg:visible md:bg-blue-950"
+      class="flex flex-col min-w-fit min-h-screen p-3 hidden invisible lg:block lg:visible bg-gray-100 md:bg-blue-950"
     >
       <menu-table-of-contents :categories="categories" />
     </div>
     <div class="flex w-full pt-24 px-4 md:px-6 visible">
-      <ContentDoc class="prose" />
+      <ContentDoc class="prose dark:prose-invert" />
       <nav
         class="main-nav visible lg:block md:invisible rounded border-blue-100 border-2 z-10 shadow"
       >

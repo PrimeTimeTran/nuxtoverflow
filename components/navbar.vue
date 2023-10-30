@@ -18,7 +18,6 @@
           <navbar-logo />
           <NuxtLink
             type="button"
-            @click="toggleNavbar()"
             class="flex items-center text-gray-500 cursor-pointer text-xl leading-none border border-solid border-transparent rounded bg-transparent lg:hidden outline-none focus:outline-none hover:cursor-pointer hover:text-blue-500"
           >
             <font-awesome-icon icon="fa-solid fa-bars" />

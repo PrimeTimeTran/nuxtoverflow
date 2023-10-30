@@ -1,6 +1,6 @@
 <template>
   <div class="pt-24">
-    <ContentDoc class="prose" />
+    <ContentDoc class="prose dark:prose-invert" />
     <li
       v-for="item in projects"
       class="my-3 list-none"
