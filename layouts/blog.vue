@@ -1,6 +1,13 @@
 <template>
-  <h1>Hello I'm blog layout</h1>
-  <slot />
+  <div class="flex flex-col min-h-screen justify-between">
+    <div class="min-h-screen">
+      <navbar />
+      <slot />
+    </div>
+    <div>
+      <my-footer />
+    </div>
+  </div>
 </template>
 
 <script setup>

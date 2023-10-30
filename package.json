@@ -33,6 +33,7 @@
     "node-schedule": "^2.1.1",
     "nuxt-gtag": "^1.1.1",
     "nuxt-mongoose": "^1.0.3",
+    "shiki-es": "^0.14.0",
     "unhead": "^1.8.0",
     "vue-gtag": "^2.0.1"
   }

@@ -1,32 +1,32 @@
 <template>
-  <div class="container">
-    <div>
-      <span
-        v-if="languageText"
-        :style="{ background: languageBackground, color: languageColor }"
-        class="language-text ml-3 text-white"
-      >
-        {{ languageText }}
-      </span>
+  <div class="container pt-1 rounded-xl">
+    <div class="flex justify-between border-b-2 border-gray-600 p-1">
       <span
         v-if="filename"
         class="file-name-text ml-3 text-gray-600"
       >
         {{ filename }}
       </span>
+      <span
+        v-if="languageText"
+        class="language-text mr-3 rounded px-1"
+        :style="{ background: languageBackground, color: languageColor }"
+      >
+        {{ languageText }}
+      </span>
     </div>
     <slot />
     <div class="flex justify-end relative right-4 bottom-12 h-0">
       <span
-        class="mr-3 text-gray-300 h-0"
         v-if="copied"
+        class="mr-3 text-gray-300 h-0"
       >
         Copied
       </span>
       <button @click="copy(code)">
         <font-awesome-icon
+          color="white"
           icon="fa-solid fa-copy"
-          color="gray"
         />
       </button>
     </div>
@@ -58,14 +58,19 @@ const languageMap: Record<
     color: 'white',
   },
   javascript: {
+    text: 'javascript',
+    color: 'black',
+    background: '#f7df1e',
+  },
+  js: {
     text: 'js',
     color: 'black',
     background: '#f7df1e',
   },
   dart: {
-    text: 'js',
-    color: 'black',
-    background: '#f7df1e',
+    text: 'dart',
+    color: 'white',
+    background: '#0075BA',
   },
 }
 
@@ -83,13 +88,9 @@ const languageColor = computed(() =>
 
 <style scoped>
 .container {
-  margin-top: 1rem;
-  padding-top: 1em;
-  overflow: hidden;
   position: relative;
   margin-bottom: 1rem;
-  background: #1e1e1e;
-  border-radius: 0.5rem;
+  background: #1f2937;
 }
 
 .language-text  {
@@ -104,12 +105,11 @@ const languageColor = computed(() =>
 }
 
 :slotted(pre) {
-  margin-top: 0;
-  margin-bottom: 0;
-  display: flex;
   flex: 1 1 0%;
+  display: flex;
   overflow-x: auto;
-  padding: 1rem;
+  margin-top: 0px;
+  margin-bottom: 0px;
   line-height: 1.625;
   counter-reset: lines;
 }
@@ -126,22 +126,22 @@ const languageColor = computed(() =>
 }
 
 :slotted(pre code .line::before) {
-  counter-increment: lines;
-  content: counter(lines);
   width: 1rem;
+  text-align: left;
   margin-right: 1.5rem;
   display: inline-block;
-  text-align: left;
+  content: counter(lines);
+  counter-increment: lines;
   color: rgba(115, 138, 148, 0.4);
 }
 
 :slotted(pre code .highlight) {
-  background-color: #363b46;
   display: block;
-  margin-right: -1em;
   margin-left: -1em;
+  margin-right: -1em;
   padding-right: 1em;
   padding-left: 0.75em;
+  background-color: #363b46;
   border-left: 0.25em solid red;
 }
 </style>

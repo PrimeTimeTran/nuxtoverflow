@@ -27,7 +27,7 @@ export default {
           icon: 'fa-house',
         },
         {
-          url: '/blog',
+          url: '/blog/nuxt',
           name: 'Blog',
           icon: 'fa-blog',
         },

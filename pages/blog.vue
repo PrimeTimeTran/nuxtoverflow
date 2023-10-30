@@ -1,14 +1,14 @@
 <template>
   <div class="flex flex-row min-h-full">
     <div
-      class="flex flex-col bg-gray-100 p-3 min-h-screen hidden invisible lg:block lg:visible"
+      class="flex flex-col bg-gray-100 p-3 min-h-screen hidden invisible lg:block lg:visible md:bg-blue-950"
     >
       <menu-table-of-contents :categories="categories" />
     </div>
-    <div class="flex px-0 md:px-6 visible pt-24">
+    <div class="flex w-full pt-24 px-4 md:px-6 visible">
       <ContentDoc class="prose" />
       <nav
-        class="main-nav visible lg:block md:invisible rounded border-blue-600 border-2 z-10 shadow"
+        class="main-nav visible lg:block md:invisible rounded border-blue-100 border-2 z-10 shadow"
       >
         <menu-burger
           :isOpen="isOpen"
@@ -26,6 +26,9 @@
 </template>
 
 <script setup>
+definePageMeta({
+  layout: 'blog',
+})
 const { gtag } = useGtag()
 gtag('event', 'screen_view', {
   app_name: 'Nuxt-Blog',

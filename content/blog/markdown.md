@@ -1,8 +1,4 @@
-
-
-
 # Markdown
-
 
 ## Headings
 
@@ -55,22 +51,6 @@ void helloWorld() {
   </div>
 </template>
 ```
-
-::hero
-Hello World
-
-#description
-This will be rendered inside the `description` slot.
-::
-
-::alert
-Hello MDC
-::
-
-
-
-
-
 > If you don't stand for something you'll fall for anything.
 
 ## Images
