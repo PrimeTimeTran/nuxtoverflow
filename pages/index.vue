@@ -2,7 +2,12 @@
   <div class="pt-24">
     <ContentDoc class="prose dark:prose-invert" />
     <h2 class="text-3xl mt-24 dark:text-white">Contact Form</h2>
-    <form
+    <iframe
+      height="600"
+      width="800"
+      src="https://cdn.forms-content-1.sg-form.com/d37f8368-7809-11ee-a6ab-9e66f5c4b6c4"
+    />
+    <!-- <form
       netlify
       method="post"
       name="Contact"
@@ -55,7 +60,7 @@
           Submit
         </button>
       </p>
-    </form>
+    </form> -->
   </div>
 </template>
 
