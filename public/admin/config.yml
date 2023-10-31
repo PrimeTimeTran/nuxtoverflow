@@ -8,8 +8,7 @@ backend:
 site_url: https://ltran.net/
 logo_url: https://ltran.net/icon.png
 publish_mode: editorial_workflow
-media_folder: static/img
-public_folder: /img
+media_folder: '/public/images/uploads'
 
 # used together with `npx netlify-cms-proxy-server`. https://www.netlifycms.org/docs/beta-features/#working-with-a-local-git-repository
 local_backend: true
@@ -48,12 +47,13 @@ collections:
                   'Must match "xx" or "xx-XX" syntax (ex. "en" or "sv-SE")',
                 ],
             }
+
           # - { label: Site Email, name: siteemail, widget: string, required: false }
-  - name: 'blog'
+  - name: blog
     create: true
-    label: 'Blog'
-    folder: 'content/blog'
-    format: 'frontmatter'
+    label: Blog
+    folder: content/blog
+    format: frontmatter
     slug: '{{fields.createdAt}}-{{slug}}'
     # editor:
     #   preview: true
@@ -78,6 +78,16 @@ collections:
         }
       - { label: 'Tag', name: 'tags', widget: 'string', required: false }
       - { label: 'Body', name: 'body', widget: 'markdown', required: false }
+      - {
+          label: 'Featured Image',
+          name: 'thumbnail',
+          widget: 'image',
+          required: false,
+        }
+      - label: Images
+        name: images
+        widget: list
+        field: { label: Image, name: image, widget: image }
 
   - name: 'tag'
     label: 'Tags'

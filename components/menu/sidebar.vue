@@ -1,5 +1,5 @@
 <template>
-  <div class="sidebar w-44">
+  <div class="sidebar">
     <div
       v-if="isOpen"
       class="sidebar-backdrop"

@@ -4,6 +4,4 @@ title: Vue
 description: Vue
 ---
 
-## Vue3 Concepts
-
-### Vue3 Ideas
+# Vue Intro

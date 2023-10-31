@@ -5,6 +5,10 @@ export const User = defineMongooseModel('User', {
     type: String,
     required: true,
   },
+  lastName: {
+    type: String,
+    required: true,
+  },
 })
 
 export default defineEventHandler(async (e) => {

@@ -2,9 +2,9 @@
 export default defineNuxtConfig({
   devtools: { enabled: true },
   modules: [
-    '@nuxt/content',
     'nuxt-gtag',
     'nuxt-mongoose',
+    '@nuxt/content',
     '@nuxtjs/color-mode',
   ],
   gtag: {
@@ -14,8 +14,8 @@ export default defineNuxtConfig({
     },
   },
   css: [
-    '@fortawesome/fontawesome-svg-core/styles.css',
     '~/assets/css/main.css',
+    '@fortawesome/fontawesome-svg-core/styles.css',
   ],
   postcss: {
     plugins: {
@@ -44,5 +44,18 @@ export default defineNuxtConfig({
   },
   runtimeConfig: {
     mongoDBUri: process.env.MONGODB_URI,
+  },
+  build: {
+    transpile: [
+      '@fortawesome/vue-fontawesome',
+      '@fortawesome/free-regular-svg-icons',
+      '@fortawesome/free-solid-svg-icons',
+      '@fortawesome/fontawesome-free',
+      '@fortawesome/fontawesome-svg-core',
+      '@fortawesome/pro-solid-svg-icons',
+      '@fortawesome/pro-regular-svg-icons',
+      '@fortawesome/pro-light-svg-icons',
+      '@fortawesome/free-brands-svg-icons',
+    ],
   },
 })

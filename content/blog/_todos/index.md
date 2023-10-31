@@ -1,7 +1,12 @@
-Todos
+---
+createdAt: 2023-10-28
+title: Todos
+description: Todos
+---
 
+# Miscellaneous
 
-
+# Todos
 
 - [] Create tags page
 - [] Add tags to each post
@@ -11,14 +16,6 @@ Todos
 - [] Collapsible sidebar menu for table of contents
 - [] Add hotkeys on admin panel
 - [] 
-- [] 
-- [] 
-- [] 
-- [] 
-- [] 
-- [] 
-
-
 
 Styleguide
 

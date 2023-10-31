@@ -1,8 +1,8 @@
 <template>
   <div class="md:pt-24">
     <li
-      v-for="category in categories[1].children"
       class="list-none"
+      v-for="category in categories[1].children"
     >
       <ul
         class="list-none"
@@ -17,7 +17,7 @@
         <div class="py-3 ml-1">
           <li
             class="border-l dark:border-l-white"
-            v-for="child in category.children.slice(1)"
+            v-for="child in category.children"
           >
             <NuxtLink
               :href="child._path"
