@@ -1,15 +1,15 @@
 <template>
   <p
-    class="font-sans p-8 text-start md:text-center md:text-lg md:p-4 text-gray-600"
+    class="font-sans p-8 text-start md:text-center md:text-lg md:p-4 text-black dark:text-white"
   >
     © {{ currentYear }}
     <a
       href="https://ltran.net"
-      class="text-gray-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-blue-400 hover:underline hover:cursor-pointer hover:text-blue-500"
+      class="text-black hover:opacity-50 dark:text-gray-300 dark:hover:opacity-50 transition-colors duration-300 hover:underline hover:cursor-pointer"
     >
-      PrimeTimeTran
+      PrimeTimeTran.
     </a>
-    . All rights reserved.
+    All rights reserved.
   </p>
 </template>
 <script>

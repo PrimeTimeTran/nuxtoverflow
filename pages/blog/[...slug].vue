@@ -6,9 +6,7 @@
       v-if="thumbnailPath"
       :src="thumbnailPath"
     />
-    <div>
-      <ContentDoc class="prose dark:prose-invert" />
-    </div>
+    <ContentDoc class="prose dark:prose-invert" />
   </div>
 </template>
 

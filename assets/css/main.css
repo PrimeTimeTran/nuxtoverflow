@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --background-color-light: #FFFFFF;
+  --background-color-dark: rgb(17, 24, 39);
+}
+
 /* TODO: Fix section navigation hiding under navbar */
 /* https://css-tricks.com/hash-tag-links-padding/ */
 a[href^="#"] {

@@ -8,7 +8,7 @@
     <transition name="slide">
       <div
         v-if="isOpen"
-        class="sidebar-panel"
+        class="sidebar-panel bg-blue-900"
       >
         <slot />
       </div>
@@ -49,7 +49,6 @@ const emit = defineEmits(['toggled'])
   height: 100vh;
   position: fixed;
   overflow-y: auto;
-  background-color: #130f40;
   padding: 3rem 20px 2rem 20px;
 }
 </style>

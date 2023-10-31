@@ -1,5 +1,5 @@
 <template>
-  <div class="container pt-1 rounded-xl">
+  <div class="container pt-1 rounded-xl sm:w-11/12">
     <div
       v-if="filename || languageText"
       class="flex justify-between border-b-2 border-gray-600 p-1"
@@ -39,7 +39,7 @@
 <script setup lang="ts">
 import { useClipboard } from '@vueuse/core'
 
-const { copy, copied, text } = useClipboard()
+const { copy, copied } = useClipboard()
 
 const props = withDefaults(
   defineProps<{
@@ -118,12 +118,12 @@ const languageColor = computed(() =>
 }
 
 :slotted(pre code) {
-  width: 100%;
   display: flex;
   flex-direction: column;
 }
 
 :slotted(pre code .line) {
+  max-width: 100px;
   display: inline-table;
   min-height: 1rem;
 }

@@ -1,48 +1,47 @@
 <template>
   <div class="flex gap-4 hover:cursor-pointer">
     <img
-      src="https://www.svgrepo.com/show/303114/facebook-3-logo.svg"
-      width="30"
-      height="30"
       alt="fb"
-    />
-    <img
-      src="https://www.svgrepo.com/show/303115/twitter-3-logo.svg"
       width="30"
       height="30"
+      src="https://www.svgrepo.com/show/303114/facebook-3-logo.svg"
+    />
+    <img
       alt="tw"
-    />
-    <img
-      src="https://www.svgrepo.com/show/303145/instagram-2-1-logo.svg"
       width="30"
       height="30"
+      src="https://www.svgrepo.com/show/303115/twitter-3-logo.svg"
+    />
+    <img
       alt="inst"
-    />
-    <img
-      src="https://www.svgrepo.com/show/94698/github.svg"
-      class=""
       width="30"
       height="30"
+      src="https://www.svgrepo.com/show/303145/instagram-2-1-logo.svg"
+    />
+    <img
       alt="gt"
-    />
-    <img
-      src="https://www.svgrepo.com/show/22037/path.svg"
-      width="30"
-      height="30"
-      alt="pn"
-    />
-    <img
-      src="https://www.svgrepo.com/show/28145/linkedin.svg"
-      width="30"
-      height="30"
-      alt="in"
-    />
-    <img
-      src="https://www.svgrepo.com/show/22048/dribbble.svg"
       class=""
       width="30"
       height="30"
+      src="https://www.svgrepo.com/show/94698/github.svg"
+    />
+    <img
+      alt="pn"
+      width="30"
+      height="30"
+      src="https://www.svgrepo.com/show/22037/path.svg"
+    />
+    <img
+      alt="in"
+      width="30"
+      height="30"
+      src="https://www.svgrepo.com/show/28145/linkedin.svg"
+    />
+    <img
       alt="db"
+      width="30"
+      height="30"
+      src="https://www.svgrepo.com/show/22048/dribbble.svg"
     />
   </div>
 </template>

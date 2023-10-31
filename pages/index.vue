@@ -1,7 +1,7 @@
 <template>
   <div class="pt-24">
     <ContentDoc class="prose dark:prose-invert" />
-    <h2 class="text-3xl mt-24">Contact Form</h2>
+    <h2 class="text-3xl mt-24 dark:text-white">Contact Form</h2>
     <form
       netlify
       method="post"
@@ -10,7 +10,7 @@
       @submit.prevent="sendForm"
       data-netlify-recaptcha="true"
       data-netlify-honeypot="bot-field"
-      class="bg-gray-200 p-16 mt-16 rounded flex flex-col justify-center align-middle"
+      class="bg-gray-200 dark:bg-gray-800 p-16 mt-16 rounded flex flex-col justify-center align-middle"
     >
       <input
         class="hidden"
@@ -19,7 +19,7 @@
       <p>
         <label
           for="name"
-          class="text-gray-800"
+          class="text-gray-800 dark:text-white"
         >
           Name:
         </label>
@@ -27,13 +27,14 @@
           type="text"
           name="name"
           id="name"
+          placeholder="John Doe"
           class="form-input block w-full text-black p-3 mt-3 rounded"
         />
       </p>
       <p>
         <label
           for="email"
-          class="text-gray-800"
+          class="text-gray-800 dark:text-white"
         >
           Email:
         </label>
@@ -41,6 +42,7 @@
           type="email"
           name="email"
           id="email"
+          placeholder="john@gmail.com"
           class="form-input block w-full text-black p-3 mt-3 rounded"
         />
       </p>

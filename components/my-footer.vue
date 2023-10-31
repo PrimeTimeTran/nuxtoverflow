@@ -1,17 +1,19 @@
 <template>
-  <footer class="bg-blue-100/80 font-sans dark:bg-gray-900">
+  <footer
+    class="bg-white font-sans dark:bg-gray-900 border-t-2 border-top-gray-100 dark:border-t-gray-950"
+  >
     <div class="container px-6 py-12 mx-auto">
       <div
         class="grid grid-cols-1 gap-6 sm:grid-cols-2 sm:gap-y-10 lg:grid-cols-4"
       >
         <footer-subscribe-form />
         <div>
-          <p class="font-semibold text-gray-800 dark:text-white">Frameworks</p>
+          <p class="text-black dark:text-white font-semibold">Frameworks</p>
           <div class="flex flex-col items-start mt-5 space-y-2">
             <NuxtLink
               :to="item.url"
               v-for="item in frameworks"
-              class="text-gray-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-blue-400 hover:underline hover:cursor-pointer hover:text-blue-500"
+              class="text-black hover:opacity-50 dark:text-gray-300 dark:hover:opacity-50 transition-colors duration-300 hover:underline hover:cursor-pointer"
             >
               {{ item.name }}
             </NuxtLink>
@@ -19,12 +21,12 @@
         </div>
 
         <div>
-          <p class="font-semibold text-gray-800 dark:text-white">Industries</p>
+          <p class="text-black dark:text-white font-semibold">Industries</p>
 
           <div class="flex flex-col items-start mt-5 space-y-2">
             <NuxtLink
               v-for="item in backends"
-              class="text-gray-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-blue-400 hover:underline hover:cursor-pointer hover:text-blue-500"
+              class="text-black hover:opacity-50 dark:text-gray-300 dark:hover:opacity-50 transition-colors duration-300 hover:underline hover:cursor-pointer"
             >
               {{ item }}
             </NuxtLink>
