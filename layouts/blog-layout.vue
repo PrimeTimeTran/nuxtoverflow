@@ -8,7 +8,7 @@
         <div
           class="flex flex-col min-w-fit min-h-screen p-3 hidden invisible lg:block lg:visible bg-gray-100 md:bg-blue-950"
         >
-          <menu-table-of-contents :categories="categories" />
+          <menu-toc @toggled="handleToggle" />
         </div>
         <div class="flex w-full pt-24 px-4 md:px-6 visible">
           <slot />
@@ -17,14 +17,14 @@
           >
             <menu-burger
               :isOpen="isOpen"
-              @toggled="handleToggle"
+              @toggled="toggleOpen"
             />
           </nav>
           <menu-sidebar
             :isOpen="isOpen"
-            @toggled="handleToggle"
+            @toggled="toggleOpen"
           >
-            <menu-table-of-contents :categories="categories" />
+            <menu-toc @toggled="handleToggle" />
           </menu-sidebar>
         </div>
       </div>
@@ -36,35 +36,10 @@
 </template>
 
 <script setup>
-import { ref, watch } from 'vue'
-
-let categories = ref([])
-
-const { data: navigation } = await useAsyncData(
-  'navigation',
-  () => fetchContentNavigation(),
-  {},
-  {
-    watch: [categories],
-  }
-)
-// Categories is not always up to date. It prints correctly but doesn't log correctly.
-// Some categories have children "out of order". Flutter
-categories = navigation
-
-// watch(
-//   () => categories,
-//   (neww, oldd) => {
-//     console.log({
-//       neww,
-//       oldd,
-//     })
-//   }
-// )
-
 const { isOpen, toggleOpen } = useToggleOpen()
 
 const handleToggle = () => {
+  if (window.innerWidth > 768) return
   toggleOpen()
 }
 </script>

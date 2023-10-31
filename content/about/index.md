@@ -4,7 +4,7 @@ Hi I'm Loi. I'm a developer with 10 years experience building full stack web & m
 
 I'm hungry so am always tinkering and trying to be a better version of myself not only as a developer but as a friend, brother, person.
 
-Technologies I regularly use follow:
+Technologies I use:
 
 ## Frontend Frameworks
 

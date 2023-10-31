@@ -1,7 +1,7 @@
 <template>
   <ul class="flex flex-col lg:flex-row list-none m-auto w-full">
     <NuxtLink
-      :href="item.url"
+      :to="item.url"
       :key="item.name"
       v-for="item in navItems"
       class="flex items-center text-gray-500 dark:text-white hover:text-gray-900 hover:border-b-2 hover:border-b-gray-900 dark:hover:border-b-2 dark:hover:border-b-white cursor-pointer transition-colors duration-300 px-12 text-xs font-bold hover:opacity-75 py-3"
@@ -27,7 +27,7 @@ export default {
           icon: 'fa-house',
         },
         {
-          url: '/blog/nuxt',
+          url: '/blog/blogs',
           name: 'Blog',
           icon: 'fa-blog',
         },

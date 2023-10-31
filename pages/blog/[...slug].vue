@@ -14,7 +14,7 @@
 
 <script setup>
 definePageMeta({
-  layout: 'blog',
+  layout: 'blog-layout',
 })
 const { gtag } = useGtag()
 gtag('event', 'screen_view', {

@@ -18,14 +18,15 @@
           <navbar-logo />
           <NuxtLink
             type="button"
-            class="flex items-center text-gray-500 cursor-pointer text-xl leading-none border border-solid border-transparent rounded bg-transparent lg:hidden outline-none focus:outline-none hover:cursor-pointer hover:text-blue-500"
+            @click="toggleNavbar"
+            class="flex items-center text-gray-500 hover:text-black cursor-pointer text-xl leading-none border border-solid border-transparent rounded bg-transparent lg:hidden outline-none focus:outline-none hover:cursor-pointer"
           >
             <font-awesome-icon icon="fa-solid fa-bars" />
           </NuxtLink>
         </div>
         <div
-          v-bind:class="{ hidden: !showMenu, flex: showMenu }"
           class="lg:flex lg:flex-grow items-center"
+          v-bind:class="{ hidden: !showMenu, flex: showMenu }"
         >
           <navbar-items />
         </div>

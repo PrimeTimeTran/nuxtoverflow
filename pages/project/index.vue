@@ -5,19 +5,19 @@
       v-for="item in projects"
       class="my-3 list-none"
     >
-      <a
-        :href="item._path"
+      <NuxtLink
+        :to="item._path"
         class="text-blue-500"
       >
         {{ item.title }}
-      </a>
+      </NuxtLink>
     </li>
   </div>
 </template>
 
 <script setup>
 let projects = await queryContent('project').find()
-projects.pop()
+projects
 const { gtag } = useGtag()
 gtag('event', 'screen_view', {
   app_name: 'Nuxt-Blog',

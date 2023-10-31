@@ -5,6 +5,4 @@ description: This content is pretty cool
 ---
 
 
-## Vue3 Prints
-
-
+# Vue Printing

@@ -12,7 +12,7 @@ Nuxt is an incredible framework brought to us by a team of incredibly talented p
 
 It's written as a templating engine
 
-```vue
+```vue {1-6} [/app.vue]
 <template>
   <div class="pt-24">
     <h1>Hello World</h1>
