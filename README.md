@@ -75,3 +75,6 @@ bun run preview
 Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
 
 https://answers.netlify.com/t/how-to-configure-netlify-dev-to-run-with-nuxt-3-for-local-testing-of-netlify-functions/45794/4
+
+
+

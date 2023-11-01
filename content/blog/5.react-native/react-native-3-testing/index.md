@@ -169,3 +169,10 @@ Here is how I've done it
   });
   ```
 </details>
+
+```js
+function getTestSafePlatform() {
+  if (process.env.NODE_ENV == 'test') return true;
+  return Platform.OS === 'ios';
+}
+```
