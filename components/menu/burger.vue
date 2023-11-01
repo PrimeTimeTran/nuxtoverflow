@@ -1,16 +1,12 @@
 <template>
-  <nav
-    class="main-nav visible lg:block md:invisible rounded border-blue-100 border-2 z-10 shadow"
+  <div
+    @click.prevent="toggle"
+    :class="{ active: isOpen }"
   >
-    <div
-      @click.prevent="toggle"
-      :class="{ active: isOpen }"
-    >
-      <div class="bar1"></div>
-      <div class="bar2"></div>
-      <div class="bar3"></div>
-    </div>
-  </nav>
+    <div class="bar1"></div>
+    <div class="bar2"></div>
+    <div class="bar3"></div>
+  </div>
 </template>
 
 <script setup>

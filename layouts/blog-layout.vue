@@ -1,21 +1,23 @@
 <template>
-  <div
-    class="flex flex-col min-h-screen justify-between dark:bg-gray-900 dark:text-white"
-  >
+  <div class="flex flex-col justify-between dark:bg-gray-900 dark:text-white">
     <div class="min-h-screen">
       <navbar />
       <div class="flex flex-row min-h-full">
         <div
-          class="flex flex-col min-h-screen p-3 hidden invisible lg:block lg:visible bg-blue-400 dark:bg-slate-800"
+          class="flex flex-col min-w-fit min-h-screen p-3 hidden invisible lg:block lg:visible dark:bg-slate-800 border-r-2 border-gray dark:border-gray-950"
         >
           <menu-toc @toggled="handleToggle" />
         </div>
         <div class="flex w-full pt-24 px-4 md:px-6 visible">
           <slot />
-          <menu-burger
-            :isOpen="isOpen"
-            @toggled="toggleOpen"
-          />
+          <nav
+            class="main-nav visible lg:block md:invisible rounded border-blue-100 border-2 z-10 shadow"
+          >
+            <menu-burger
+              :isOpen="isOpen"
+              @toggled="toggleOpen"
+            />
+          </nav>
           <menu-sidebar
             :isOpen="isOpen"
             @toggled="toggleOpen"

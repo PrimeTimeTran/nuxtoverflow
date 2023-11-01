@@ -3,7 +3,7 @@ backend:
   name: git-gateway
   squash_merges: true
   site_domain: https://ltran.net
-  repo: PrimeTimeTran/nuxt3-decap-blog
+  repo: PrimeTimeTran/nuxtoverflow
 
 site_url: https://ltran.net/
 logo_url: https://ltran.net/icon.png

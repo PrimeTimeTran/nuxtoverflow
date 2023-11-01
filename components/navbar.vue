@@ -7,7 +7,7 @@
   >
     <navbar-scroll-spy :percent="percent" />
     <nav
-      class="fixed top-0 left-0 right-0 z-10 w-screen flex flex-wrap items-center justify-around bg-white dark:bg-slate-800 backdrop-blur-md shadow-md"
+      class="fixed top-0 left-0 right-0 z-10 w-screen flex flex-wrap items-center justify-around bg-white dark:bg-slate-800 backdrop-blur-md shadow"
     >
       <div
         class="container px-4 mx-auto flex flex-wrap items-center justify-between"
@@ -19,7 +19,7 @@
           <NuxtLink
             type="button"
             @click="toggleNavbar"
-            class="flex items-center text-gray-500 hover:text-black cursor-pointer text-xl leading-none border border-solid border-transparent rounded bg-transparent lg:hidden outline-none focus:outline-none hover:cursor-pointer"
+            class="flex items-center text-gray-500 dark:hover:opacity-50 cursor-pointer text-xl leading-none border border-solid border-transparent rounded bg-transparent lg:hidden outline-none focus:outline-none hover:cursor-pointer"
           >
             <font-awesome-icon icon="fa-solid fa-bars" />
           </NuxtLink>

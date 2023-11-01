@@ -11,24 +11,24 @@
             <NuxtLink
               :to="category._path"
               @click="$emit('toggled')"
-              class="text-white hover:text-gray-500"
+              class="text-black dark:text-white hover:opacity-50"
             >
               {{ category.title }}
             </NuxtLink>
             <div class="py-3 ml-1">
               <li
-                class="border-l dark:border-l-white"
+                class="border-l border-l-gray-900/25 dark:border-l-white/25"
                 v-for="child in callExposedFunction(category)"
               >
                 <NuxtLink
                   :to="child._path"
                   @click="$emit('toggled')"
-                  class="text-white hover:text-gray-500 ml-6 min-w-full"
+                  class="text-black dark:text-white hover:opacity-50 ml-6 min-w-full"
                 >
                   {{ child.title }}
                 </NuxtLink>
                 <div
-                  class="w-1/12 border-b-white border-b overflow-visible relative bottom-3"
+                  class="w-1/12 border-b border-b-gray-900/25 dark:border-b-white/25 overflow-visible relative bottom-3"
                 />
               </li>
             </div>
@@ -48,10 +48,12 @@ const callExposedFunction = (category) => {
   const items = category.children
   if (category._path == '') {
   }
-  const weird = items[items.length - 1]._path == category._path
-  if (weird) {
-    const last = items.pop()
-    items.unshift(last)
+  if (items) {
+    const weird = items[items.length - 1]._path == category._path
+    if (weird) {
+      const last = items.pop()
+      items.unshift(last)
+    }
   }
 
   return items

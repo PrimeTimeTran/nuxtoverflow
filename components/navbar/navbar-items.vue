@@ -28,7 +28,7 @@ export default {
         },
         {
           url: '/blog/blogs',
-          name: 'Blog',
+          name: 'Articles',
           icon: 'fa-blog',
         },
         {
