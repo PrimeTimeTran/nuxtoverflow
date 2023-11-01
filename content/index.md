@@ -2,9 +2,7 @@
 
 Your new home for nuxt content & more.
 
-
-- Blogs
-- Recommendations
-- Awesome Nuxt
-- Comparisons
+- Articles on coding
+- Awesome libraries
+- Tutorials
 - More

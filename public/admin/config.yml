@@ -6,7 +6,7 @@ backend:
   repo: PrimeTimeTran/nuxtoverflow
 
 site_url: https://ltran.net/
-logo_url: https://ltran.net/icon.png
+logo_url: https://ltran.net/images/icon-black.png
 publish_mode: editorial_workflow
 media_folder: '/public/images/uploads'
 
@@ -49,10 +49,10 @@ collections:
             }
 
           # - { label: Site Email, name: siteemail, widget: string, required: false }
-  - name: blog
+  - name: article
     create: true
-    label: Blog
-    folder: content/blog
+    label: Article
+    folder: content/article
     format: frontmatter
     slug: '{{fields.createdAt}}-{{slug}}'
     # editor:

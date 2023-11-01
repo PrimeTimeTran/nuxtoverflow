@@ -1,5 +1,5 @@
 <template>
-  <div class="container pt-1 rounded-xl sm:w-11/12">
+  <div class="container pt-1 rounded-xl">
     <div
       v-if="filename || languageText"
       class="flex justify-between border-b-2 border-gray-600 p-1"
@@ -12,7 +12,7 @@
       </span>
       <span
         v-if="languageText"
-        class="language-text mr-3 rounded px-1"
+        class="language-text ml-auto mr-3 rounded px-1"
         :style="{ background: languageBackground, color: languageColor }"
       >
         {{ languageText }}
@@ -92,7 +92,6 @@ const languageColor = computed(() =>
 <style scoped>
 .container {
   position: relative;
-  margin-bottom: 1rem;
   background: #1f2937;
 }
 
@@ -112,18 +111,20 @@ const languageColor = computed(() =>
   display: flex;
   overflow-x: auto;
   margin-top: 0px;
+  padding-top: 2px;
+  padding-bottom: 2px;
   margin-bottom: 0px;
   line-height: 1.625;
   counter-reset: lines;
 }
 
 :slotted(pre code) {
+  width: 100%;
   display: flex;
   flex-direction: column;
 }
 
 :slotted(pre code .line) {
-  max-width: 100px;
   display: inline-table;
   min-height: 1rem;
 }
