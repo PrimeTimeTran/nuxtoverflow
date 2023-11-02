@@ -54,6 +54,13 @@ export default {
             '--tw-prose-invert-pre-bg': 'rgb(0 0 0 / 50%)',
             '--tw-prose-invert-th-borders': theme('colors.gray[600]'),
             '--tw-prose-invert-td-borders': theme('colors.gray[700]'),
+            '.inline-code': {
+              // Define styles for inline code
+              backgroundColor: 'gray',
+              color: 'white',
+              padding: '0.2rem 0.4rem',
+              borderRadius: '0.25rem',
+            },
           },
         },
       }),

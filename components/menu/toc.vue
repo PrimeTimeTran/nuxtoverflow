@@ -46,8 +46,6 @@ const emit = defineEmits(['toggled'])
 // Known cases are Flutter, GCP, Business
 const callExposedFunction = (category) => {
   const items = category.children
-  if (category._path == '') {
-  }
   if (items) {
     const weird = items[items.length - 1]._path == category._path
     if (weird) {

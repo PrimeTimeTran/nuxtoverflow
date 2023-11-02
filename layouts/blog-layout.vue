@@ -4,7 +4,7 @@
       <navbar />
       <div class="flex flex-row">
         <div
-          class="flex flex-col flex-grow h-full max-h-screen overflow-y-auto min-w-fit p-3 invisible lg:block lg:visible dark:bg-slate-800 border-r-2 border-gray dark:border-gray-950"
+          class="flex flex-col flex-grow h-full max-h-screen overflow-y-auto min-w-fit p-3 hidden invisible lg:block lg:visible dark:bg-slate-800 border-r-2 border-gray dark:border-gray-950"
         >
           <menu-toc @toggled="handleToggle" />
         </div>

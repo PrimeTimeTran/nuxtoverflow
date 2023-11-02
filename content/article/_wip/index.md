@@ -15,8 +15,7 @@ description: Todos
 - [] Add social share preview for each post
 - [] Collapsible sidebar menu for table of contents
 - [] Add hotkeys on admin panel
-- [] 
-
+  
 Styleguide
 
 https://decapcms.org/docs/writing-style-guide/#code-snippet-formatting
