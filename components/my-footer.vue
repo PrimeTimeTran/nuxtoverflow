@@ -6,7 +6,7 @@
       <div
         class="grid grid-cols-1 gap-6 sm:grid-cols-2 sm:gap-y-10 lg:grid-cols-4"
       >
-        <div>
+        <div class="sm-col">
           <p class="text-black dark:text-white font-semibold">Frameworks</p>
           <div class="flex flex-col items-start mt-5 space-y-2">
             <NuxtLink
@@ -31,7 +31,7 @@
             </NuxtLink>
           </div>
         </div>
-        <footer-subscribe-form />
+        <footer-subscribe-form class="col-span-2" />
       </div>
 
       <hr class="my-6 border-gray-200 md:my-8 dark:border-gray-700 h-2" />

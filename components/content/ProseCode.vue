@@ -95,7 +95,7 @@ const languageColor = computed(() =>
   background: #1f2937;
 }
 
-.language-text  {
+.language-text {
   top: 0;
   right: 1em;
   font-size: 14px;
@@ -146,6 +146,6 @@ const languageColor = computed(() =>
   padding-right: 1em;
   padding-left: 0.75em;
   background-color: #363b46;
-  border-left: 0.25em solid red;
+  border-left: 0.25em solid #41b883;
 }
 </style>

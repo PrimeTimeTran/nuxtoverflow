@@ -27,7 +27,7 @@ An initialized Nuxt project contains the following
 </template>
 ```
 
-## Add Todos & Read them from state
+## Create Todo & Read them
 
 ```vue {4-18, 22-32} [/app.vue] 
 <template>
@@ -117,6 +117,7 @@ const toggleStatus = (todo) => {
 
 ```
 
+## Delete Todo
 
 ```vue {22-24, 49-54} [/app.vue] 
 <template>
@@ -176,7 +177,7 @@ const remove = (name) => {
 </script>
 ```
 
-## Local to composable state
+## Local to Global
 
 ```vue {43} [/app.vue] 
 <template>
@@ -249,7 +250,7 @@ const sameCounter = useState('counter')
 </script>
 ```
 
-## The child component
+## Sibling Components/Global
 
 ```vue {8} [/components/todos-meta.vue]
 <template>

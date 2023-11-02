@@ -2,13 +2,15 @@
   <div class="flex flex-col justify-between dark:bg-gray-900 dark:text-white">
     <div class="min-h-screen">
       <navbar />
-      <div class="flex flex-row min-h-full">
+      <div class="flex flex-row">
         <div
-          class="flex flex-col min-w-fit min-h-screen p-3 hidden invisible lg:block lg:visible dark:bg-slate-800 border-r-2 border-gray dark:border-gray-950"
+          class="flex flex-col flex-grow h-full max-h-screen overflow-y-auto min-w-fit p-3 invisible lg:block lg:visible dark:bg-slate-800 border-r-2 border-gray dark:border-gray-950"
         >
           <menu-toc @toggled="handleToggle" />
         </div>
-        <div class="flex w-full pt-24 px-4 md:px-6 visible">
+        <div
+          class="flex md:justify-center w-full max-h-screen overflow-y-auto pt-24 px-4 md:px-6 visible"
+        >
           <slot />
           <nav
             class="main-nav visible lg:block md:invisible rounded border-blue-100 border-2 z-10 shadow"
