@@ -1,58 +1,62 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  devtools: { enabled: true },
   ssr: false,
-  vite: {
-    server: {
-      watch: {
-        usePolling: true,
-      },
+  devtools: { enabled: true },
+  plugins: ['~/plugins/fontawesome.ts'],
+  css: ['@fortawesome/fontawesome-svg-core/styles.css'],
+  nitro: {
+    prerender: {
+      crawlLinks: true,
+      failOnError: false,
+      routes: ['/', '/404.html'],
     },
+    ignore: ['/admin/users', '/todos', '/entities', '/login'],
+  },
+  formkit: {
+    autoImport: true,
+  },
+  runtimeConfig: {
+    public: {
+      apiUrl: process.env.API_URL || 'https://turboship.ltran.net/api',
+    },
+  },
+  typescript: {
+    typeCheck: true,
   },
   modules: [
-    'nuxt-gtag',
-    'nuxt-mongoose',
+    '@nuxtjs/tailwindcss',
     '@nuxt/content',
+    'nuxt-mongoose',
     '@nuxtjs/color-mode',
+    '@formkit/nuxt',
   ],
-  gtag: {
-    id: 'G-M00JRG1H9T',
-    config: {
-      page_title: 'App Page',
-    },
+  mongoose: {
+    options: {},
+    modelsDir: 'models',
   },
-  css: [
-    '~/assets/css/main.css',
-    '@fortawesome/fontawesome-svg-core/styles.css',
-  ],
   postcss: {
     plugins: {
       tailwindcss: {},
       autoprefixer: {},
     },
   },
-  mongoose: {
-    uri: 'process.env.MONGODB_URI',
-    options: {},
-    modelsDir: 'models',
-  },
   content: {
-    api: {
-      baseURL: '/api/_my_content',
-    },
+    documentDriven: true,
     highlight: {
-      preload: ['dart', 'python', 'javascript'],
+      preload: [
+        'dart',
+        'python',
+        'javascript',
+        'js',
+        'typescript',
+        'ts',
+        'vue',
+      ],
       theme: {
-        default: 'github-dark',
         light: 'github-light',
+        default: 'github-dark',
       },
     },
-  },
-  nitro: {
-    plugins: ['~/server/index.ts'],
-  },
-  runtimeConfig: {
-    mongoDBUri: process.env.MONGODB_URI,
   },
   build: {
     transpile: [

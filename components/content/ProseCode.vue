@@ -1,44 +1,11 @@
-<template>
-  <div class="container pt-1 rounded-xl">
-    <div
-      v-if="filename || languageText"
-      class="flex justify-between border-b-2 border-gray-600 p-1"
-    >
-      <span
-        v-if="filename"
-        class="file-name-text ml-3 text-gray-600"
-      >
-        {{ filename }}
-      </span>
-      <span
-        v-if="languageText"
-        class="language-text ml-auto mr-3 rounded px-1"
-        :style="{ background: languageBackground, color: languageColor }"
-      >
-        {{ languageText }}
-      </span>
-    </div>
-    <slot />
-    <div class="flex justify-end relative right-4 bottom-12 h-0">
-      <span
-        v-if="copied"
-        class="mr-3 text-gray-300 h-0"
-      >
-        Copied
-      </span>
-      <button @click="copy(code)">
-        <font-awesome-icon
-          color="white"
-          icon="fa-solid fa-copy"
-        />
-      </button>
-    </div>
-  </div>
-</template>
-
 <script setup lang="ts">
+// Info: This must be placed inside of ./components/content to work.
+// To replace the component it's overwriting
+// https://content.nuxt.com/components/prose
+
 import { useClipboard } from '@vueuse/core'
 
+type Color = 'red' | 'blue' | 'green'
 const { copy, copied } = useClipboard()
 
 const props = withDefaults(
@@ -89,21 +56,56 @@ const languageColor = computed(() =>
 )
 </script>
 
+<template>
+  <div class="container pt-1 rounded-xl">
+    <div
+      class="flex justify-center items-center border-b-2 border-gray-600 px-1 py-0"
+    >
+      <div class="ml-2 text-gray-500">
+        {{ filename }}
+      </div>
+      <span
+        class="p-1 py-0 ml-auto rounded"
+        :style="{ background: languageBackground || '', color: languageColor as Color | undefined }"
+      >
+        {{ languageText }}
+      </span>
+      <div
+        @click="copy(code)"
+        :class="[
+          'ml-1',
+          'p-3',
+          'py-0',
+          'border',
+          'rounded',
+          'hover:opacity-50',
+          copied ? 'border-green-300' : 'border-white-300',
+        ]"
+      >
+        <button>
+          <font-awesome-icon
+            v-if="copied"
+            :style="{
+              color: '#64ffda',
+            }"
+            icon="fa-solid fa-check"
+          />
+          <font-awesome-icon
+            v-else
+            color="white"
+            icon="fa-solid fa-copy"
+          />
+        </button>
+      </div>
+    </div>
+    <slot />
+  </div>
+</template>
+
 <style scoped>
 .container {
   position: relative;
   background: #1f2937;
-}
-
-.language-text {
-  top: 0;
-  right: 1em;
-  font-size: 14px;
-  position: absolute;
-  padding: 0.25em 0.5em;
-  text-transform: uppercase;
-  border-bottom-left-radius: 0.25em;
-  border-bottom-right-radius: 0.25em;
 }
 
 :slotted(pre) {
@@ -146,6 +148,7 @@ const languageColor = computed(() =>
   padding-right: 1em;
   padding-left: 0.75em;
   background-color: #363b46;
+  /* Vue COLOR */
   border-left: 0.25em solid #41b883;
 }
 </style>

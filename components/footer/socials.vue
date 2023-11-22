@@ -18,13 +18,15 @@
       height="30"
       src="https://www.svgrepo.com/show/303145/instagram-2-1-logo.svg"
     />
-    <img
-      alt="gt"
-      class=""
-      width="30"
-      height="30"
-      src="https://www.svgrepo.com/show/94698/github.svg"
-    />
+    <a href="https://github.com/PrimeTimeTran/nuxtoverflow">
+      <img
+        alt="gt"
+        class=""
+        width="30"
+        height="30"
+        src="https://www.svgrepo.com/show/94698/github.svg"
+      />
+    </a>
     <img
       alt="pn"
       width="30"

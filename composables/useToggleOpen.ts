@@ -1,5 +1,3 @@
-// ./composables/useToggleOpen.js
-
 import { ref } from 'vue'
 
 export function useToggleOpen() {

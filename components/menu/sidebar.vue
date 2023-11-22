@@ -2,13 +2,13 @@
   <div class="sidebar">
     <div
       v-if="isOpen"
-      class="sidebar-backdrop"
+      class="sidebar-backdrop overflow-auto scrollbar-hide"
       @click="$emit('toggled')"
     />
     <transition name="slide">
       <div
         v-if="isOpen"
-        class="sidebar-panel bg-neutral-50 dark:bg-slate-800 min-w-fit shadow"
+        class="sidebar-panel dark:bg-slate-800 min-w-fit shadow"
       >
         <slot />
       </div>
@@ -44,10 +44,10 @@ const emit = defineEmits(['toggled'])
 .sidebar-panel {
   top: 0;
   left: 0;
-  z-index: 999;
+  /* z-index: 999; */
   height: 100vh;
   position: fixed;
-  overflow-y: auto;
+  /* overflow-y: auto; */
   padding: 3rem 20px 2rem 20px;
 }
 </style>

@@ -91,12 +91,7 @@
 </template>
 
 <script setup>
-const { gtag } = useGtag()
-gtag('event', 'screen_view', {
-  app_name: 'Nuxt-Blog',
-  screen_name: 'About',
-})
 definePageMeta({
-  layout: 'custom',
+  layout: 'CustomLayout',
 })
 </script>
